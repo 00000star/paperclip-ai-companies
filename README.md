@@ -36,6 +36,18 @@ Output goes to:
 generated/zimsme-ai-solutions/
 ```
 
+## Score Companies
+
+```bash
+npm run score
+```
+
+## Validate A Generated Package
+
+```bash
+npm run validate-package -- generated/zimsme-ai-solutions
+```
+
 ## Validate
 
 ```bash
@@ -56,4 +68,3 @@ Each company should answer:
 - What are the unit economics?
 - What should never be promised?
 - What can be automated safely?
-

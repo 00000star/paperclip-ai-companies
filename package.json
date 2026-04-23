@@ -7,6 +7,8 @@
   "scripts": {
     "start": "python3 -m http.server 4178",
     "check": "node scripts/check.mjs",
-    "scaffold": "node scripts/scaffold-company.mjs"
+    "scaffold": "node scripts/scaffold-company.mjs",
+    "score": "node scripts/score-companies.mjs",
+    "validate-package": "node scripts/validate-package.mjs"
   }
 }

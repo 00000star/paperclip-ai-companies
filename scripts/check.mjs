@@ -8,6 +8,8 @@ const requiredFiles = [
   "app.js",
   "data/companies.json",
   "scripts/scaffold-company.mjs",
+  "scripts/score-companies.mjs",
+  "scripts/validate-package.mjs",
   "README.md",
   "package.json",
 ];
@@ -26,6 +28,8 @@ const companies = JSON.parse(readFileSync(join(root, "data/companies.json"), "ut
 const html = readFileSync(join(root, "index.html"), "utf8");
 const js = readFileSync(join(root, "app.js"), "utf8");
 const scaffold = readFileSync(join(root, "scripts/scaffold-company.mjs"), "utf8");
+const score = readFileSync(join(root, "scripts/score-companies.mjs"), "utf8");
+const validatePackage = readFileSync(join(root, "scripts/validate-package.mjs"), "utf8");
 
 if (companies.length < 4) failures.push("Expected at least four company blueprints");
 
@@ -44,9 +48,12 @@ for (const phrase of ["companyScore", "renderDetail", "data/companies.json"]) {
   if (!js.includes(phrase)) failures.push(`Missing dashboard behavior: ${phrase}`);
 }
 
-for (const phrase of ["COMPANY.md", ".paperclip.yaml", "AGENTS.md", "PROJECT.md", "SKILL.md"]) {
+for (const phrase of ["COMPANY.md", ".paperclip.yaml", "AGENTS.md", "PROJECT.md", "SKILL.md", "company.manifest.json", "RISK_REGISTER.md"]) {
   if (!scaffold.includes(phrase)) failures.push(`Missing scaffold output: ${phrase}`);
 }
+
+if (!score.includes("score | slug | core | retainer | name")) failures.push("Score report header missing");
+if (!validatePackage.includes("company.manifest.json")) failures.push("Package validator missing manifest check");
 
 if (failures.length > 0) {
   console.error("Check failed:");
@@ -55,4 +62,3 @@ if (failures.length > 0) {
 }
 
 console.log("OK - Paperclip AI company foundry files, blueprints, and scaffold generator are present.");
-

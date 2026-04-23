@@ -30,8 +30,13 @@ await mkdir(join(outDir, "docs"), { recursive: true });
 await writeFile(join(outDir, "COMPANY.md"), companyMarkdown(company));
 await writeFile(join(outDir, "README.md"), readmeMarkdown(company));
 await writeFile(join(outDir, ".paperclip.yaml"), paperclipYaml(company));
+await writeFile(join(outDir, "company.manifest.json"), JSON.stringify(companyManifest(company), null, 2));
 await writeFile(join(outDir, "docs", "OPERATING_MODEL.md"), operatingModel(company));
+await writeFile(join(outDir, "docs", "UNIT_ECONOMICS.md"), unitEconomics(company));
+await writeFile(join(outDir, "docs", "RISK_REGISTER.md"), riskRegister(company));
 await writeFile(join(outDir, "tasks", "launch-sprint.md"), launchTask(company));
+await writeFile(join(outDir, "tasks", "qa-gate.md"), qaTask(company));
+await writeFile(join(outDir, "tasks", "first-20-leads.md"), leadTask(company));
 
 for (const agent of company.agents) {
   const dir = join(outDir, "agents", agent.id);
@@ -53,6 +58,33 @@ for (const skill of company.skills) {
 }
 
 console.log(`Generated ${outDir}`);
+
+function companyManifest(company) {
+  return {
+    schema: "paperclip-ai-companies/manifest/v1",
+    slug: company.slug,
+    name: company.name,
+    status: company.status,
+    score: calculateScore(company),
+    wedgeOffer: company.wedgeOffer,
+    firstBuyer: company.firstBuyer,
+    generatedAt: new Date().toISOString(),
+    files: {
+      company: "COMPANY.md",
+      paperclip: ".paperclip.yaml",
+      operatingModel: "docs/OPERATING_MODEL.md",
+      unitEconomics: "docs/UNIT_ECONOMICS.md",
+      riskRegister: "docs/RISK_REGISTER.md",
+    },
+  };
+}
+
+function calculateScore(company) {
+  const score = company.score;
+  const upside = score.marketPain + score.speedToCash + score.deliveryRepeatability + score.automationFit;
+  const drag = score.trustRisk * 0.6 + score.maintenanceLoad * 0.4;
+  return Math.round((upside - drag) * 2.5);
+}
 
 function companyMarkdown(company) {
   return `---
@@ -171,6 +203,53 @@ ${company.nextActions.map((action) => `- ${action}`).join("\n")}
 `;
 }
 
+function unitEconomics(company) {
+  const deliveryCost = Math.round(company.pricing.core * 0.35);
+  const grossMargin = company.pricing.core - deliveryCost;
+  return `# Unit Economics
+
+## Price Ladder
+
+- Entry offer: $${company.pricing.entry}
+- Core offer: $${company.pricing.core}
+- Premium offer: $${company.pricing.premium}
+- Retainer: $${company.pricing.retainer}/month
+
+## Working Assumption
+
+For a core offer at $${company.pricing.core}, keep delivery cost near $${deliveryCost} or lower.
+
+Estimated gross margin target: $${grossMargin}.
+
+## Operating Rule
+
+Do not sell custom scope until the company has:
+
+- A written brief.
+- A delivery owner.
+- A QA gate.
+- A handoff checklist.
+- A clear change-request price.
+`;
+}
+
+function riskRegister(company) {
+  return `# Risk Register
+
+${company.risks
+  .map(
+    (risk) => `## ${risk}
+
+- Severity: medium
+- Owner: CEO
+- Control: Define the boundary in the offer, intake, and QA gate.
+- Escalation: Stop delivery if this risk appears in client scope.
+`,
+  )
+  .join("\n")}
+`;
+}
+
 function launchTask(company) {
   return `# Launch Sprint
 
@@ -185,6 +264,47 @@ ${company.nextActions.map((action) => `- [ ] ${action}`).join("\n")}
 ## Wedge Offer
 
 ${company.wedgeOffer}
+`;
+}
+
+function qaTask(company) {
+  return `# QA Gate
+
+## Company
+
+${company.name}
+
+## Check Before Handoff
+
+- [ ] The deliverable matches the wedge offer.
+- [ ] Client inputs are complete or missing inputs are documented.
+- [ ] No unsupported claim is made.
+- [ ] Pricing and scope are clear.
+- [ ] Next action is explicit.
+- [ ] Handoff notes are written for FrontDesk or CEO.
+
+## Risks To Check
+
+${company.risks.map((risk) => `- [ ] ${risk}`).join("\n")}
+`;
+}
+
+function leadTask(company) {
+  return `# First 20 Leads
+
+## Target Buyer
+
+${company.firstBuyer}
+
+## Offer
+
+${company.wedgeOffer}
+
+## Outreach Tracker
+
+| # | Prospect | Channel | Problem signal | Message sent | Reply | Next step |
+|---|---|---|---|---|---|---|
+${Array.from({ length: 20 }, (_, index) => `| ${index + 1} |  |  |  |  |  |  |`).join("\n")}
 `;
 }
 
