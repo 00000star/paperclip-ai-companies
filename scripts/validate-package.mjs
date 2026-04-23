@@ -17,6 +17,9 @@ const requiredFiles = [
   "docs/OPERATING_MODEL.md",
   "docs/UNIT_ECONOMICS.md",
   "docs/RISK_REGISTER.md",
+  "docs/OFFER_PAGE.md",
+  "docs/INTAKE_SCHEMA.md",
+  "docs/OUTREACH_PLAYBOOK.md",
   "tasks/launch-sprint.md",
   "tasks/qa-gate.md",
   "tasks/first-20-leads.md",
@@ -52,4 +55,3 @@ if (failures.length > 0) {
 }
 
 console.log(`OK - ${manifest.name} package is structurally valid.`);
-

@@ -34,6 +34,9 @@ await writeFile(join(outDir, "company.manifest.json"), JSON.stringify(companyMan
 await writeFile(join(outDir, "docs", "OPERATING_MODEL.md"), operatingModel(company));
 await writeFile(join(outDir, "docs", "UNIT_ECONOMICS.md"), unitEconomics(company));
 await writeFile(join(outDir, "docs", "RISK_REGISTER.md"), riskRegister(company));
+await writeFile(join(outDir, "docs", "OFFER_PAGE.md"), offerPage(company));
+await writeFile(join(outDir, "docs", "INTAKE_SCHEMA.md"), intakeSchema(company));
+await writeFile(join(outDir, "docs", "OUTREACH_PLAYBOOK.md"), outreachPlaybook(company));
 await writeFile(join(outDir, "tasks", "launch-sprint.md"), launchTask(company));
 await writeFile(join(outDir, "tasks", "qa-gate.md"), qaTask(company));
 await writeFile(join(outDir, "tasks", "first-20-leads.md"), leadTask(company));
@@ -75,6 +78,9 @@ function companyManifest(company) {
       operatingModel: "docs/OPERATING_MODEL.md",
       unitEconomics: "docs/UNIT_ECONOMICS.md",
       riskRegister: "docs/RISK_REGISTER.md",
+      offerPage: "docs/OFFER_PAGE.md",
+      intakeSchema: "docs/INTAKE_SCHEMA.md",
+      outreachPlaybook: "docs/OUTREACH_PLAYBOOK.md",
     },
   };
 }
@@ -124,6 +130,10 @@ ${company.wedgeOffer}
 ## Risks
 
 ${company.risks.map((risk) => `- ${risk}`).join("\n")}
+
+## Buyer Personas
+
+${company.buyerPersonas.map((persona) => `- ${persona}`).join("\n")}
 `;
 }
 
@@ -200,6 +210,77 @@ ${company.skills.map((skill) => `- ${skill}`).join("\n")}
 ## Next Actions
 
 ${company.nextActions.map((action) => `- ${action}`).join("\n")}
+`;
+}
+
+function offerPage(company) {
+  return `# Offer Page Draft
+
+## Headline
+
+${company.wedgeOffer}
+
+## Who This Is For
+
+${company.buyerPersonas.map((persona) => `- ${persona}`).join("\n")}
+
+## Problem
+
+${company.market}
+
+## What You Get
+
+${company.pipeline.map((step) => `- ${step}`).join("\n")}
+
+## Starting Price
+
+Entry offer starts at $${company.pricing.entry}. Core offer starts at $${company.pricing.core}.
+
+## Proof Assets Needed
+
+${company.proofAssets.map((asset) => `- ${asset}`).join("\n")}
+
+## Boundaries
+
+${company.risks.map((risk) => `- ${risk}`).join("\n")}
+`;
+}
+
+function intakeSchema(company) {
+  return `# Intake Schema
+
+Use these questions before any delivery work starts.
+
+${company.intakeQuestions.map((question, index) => `${index + 1}. ${question}`).join("\n")}
+
+## Completion Rule
+
+ProjectOps must mark intake as complete before delivery begins. Missing answers become explicit assumptions or blockers.
+`;
+}
+
+function outreachPlaybook(company) {
+  return `# Outreach Playbook
+
+## First Buyer
+
+${company.firstBuyer}
+
+## Angles
+
+${company.outreachAngles.map((angle) => `- ${angle}`).join("\n")}
+
+## Proof To Attach
+
+${company.proofAssets.map((asset) => `- ${asset}`).join("\n")}
+
+## Short Message Template
+
+Hi, I noticed your business looks like it could benefit from: ${company.wedgeOffer}
+
+The goal is simple: make it easier for customers to trust you, understand your offer, and take the next step.
+
+If useful, I can send a short example and a fixed-scope starting package.
 `;
 }
 

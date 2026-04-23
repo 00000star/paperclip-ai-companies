@@ -48,6 +48,14 @@ npm run score
 npm run validate-package -- generated/zimsme-ai-solutions
 ```
 
+## Generate A Launch Board
+
+```bash
+npm run launch-board -- zimsme-ai-solutions
+```
+
+This writes a JSON launch board into the generated company package with outreach, proof, offer, intake, QA, and follow-up workstreams.
+
 ## Validate
 
 ```bash

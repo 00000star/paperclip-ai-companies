@@ -61,6 +61,29 @@
       "Weak QA causing cheap-agency perception.",
       "Overpromising AI automation without fallback paths."
     ],
+    "buyerPersonas": [
+      "Salon, clinic, contractor, tutor, restaurant, or repair shop owner using WhatsApp as the main sales channel.",
+      "Founder with a real service but no credible website, weak Google/social presence, and repeated enquiry questions.",
+      "Informal business ready to formalise and look trustworthy enough for higher-value customers."
+    ],
+    "intakeQuestions": [
+      "What does your business sell and who buys most often?",
+      "What should customers do first: WhatsApp, call, book, visit, or pay deposit?",
+      "What services, prices, locations, photos, testimonials, and FAQs can you provide?",
+      "Which repeated WhatsApp questions waste the most time?",
+      "What would make this project successful 30 days after launch?"
+    ],
+    "outreachAngles": [
+      "Your business is already selling through WhatsApp; the missing piece is a trust-building website and lead flow.",
+      "I can turn your existing WhatsApp answers into a clean site and enquiry system.",
+      "You do not need a huge app first. Start with a credibility site, lead capture, and follow-up discipline."
+    ],
+    "proofAssets": [
+      "Before/after website screenshots.",
+      "Demo WhatsApp intake flow.",
+      "Three industry-specific starter sites.",
+      "QA checklist showing mobile, links, forms, and handoff checks."
+    ],
     "nextActions": [
       "Run 20 targeted WhatsApp outreach attempts.",
       "Create 3 demo industry sites.",
@@ -88,6 +111,29 @@
     "skills": ["site-intake", "copy-polish", "static-site-builder", "launch-check"],
     "pipeline": ["Lead", "Assets", "Copy", "Build", "QA", "Deploy package", "Review", "Retainer offer"],
     "risks": ["Template sameness.", "Poor client assets.", "Scope creep.", "Low-price race."],
+    "buyerPersonas": [
+      "Solo consultant or tradesperson with weak online trust.",
+      "Local business that relies on referrals but loses search and social proof opportunities.",
+      "Founder who needs a fast professional web presence before a campaign, launch, or tender."
+    ],
+    "intakeQuestions": [
+      "What is the one action visitors should take?",
+      "What proof can we show: photos, testimonials, certifications, projects, reviews?",
+      "Which pages are required for trust?",
+      "What brand assets exist today?",
+      "What domain and hosting path should be used?"
+    ],
+    "outreachAngles": [
+      "Your offer is real, but your web presence does not prove it fast enough.",
+      "A focused 48-hour credibility site can help referrals trust you before they message.",
+      "Start with a deployable static site before paying for complex software."
+    ],
+    "proofAssets": [
+      "Vertical template gallery.",
+      "Mobile screenshot set.",
+      "Speed and accessibility check output.",
+      "Client handoff ZIP sample."
+    ],
     "nextActions": ["Build 5 vertical templates.", "Create intake form.", "Publish before/after demos."]
   },
   {
@@ -110,6 +156,29 @@
     "skills": ["readiness-audit", "safety-copy-review", "offline-kit-builder", "training-pack-generator"],
     "pipeline": ["Readiness audit", "Risk map", "Kit configuration", "Training", "Drill", "Revision", "Retainer"],
     "risks": ["False safety claims.", "Slow institutional sales.", "Local authority dependency.", "High trust burden."],
+    "buyerPersonas": [
+      "School administrator responsible for outage, heat, water, and parent communication readiness.",
+      "Clinic or NGO operations lead coordinating supplies, staff roles, and public safety handoffs.",
+      "Church, shelter, or community group that becomes an informal response hub during disruptions."
+    ],
+    "intakeQuestions": [
+      "What disruptions happen repeatedly in your area?",
+      "Who needs help first when systems fail?",
+      "What information must be printed if power or internet fails?",
+      "What data is too sensitive to share broadly?",
+      "Which staff or volunteers can own drills and updates?"
+    ],
+    "outreachAngles": [
+      "Your group probably already becomes a coordination hub during outages; the kit makes that less chaotic.",
+      "Preparedness is not a PDF. It is roles, handoffs, data freshness, and practice.",
+      "Start with an offline readiness kit before buying complex emergency software."
+    ],
+    "proofAssets": [
+      "Sample incident handoff packet.",
+      "Offline supply tracker demo.",
+      "Water safety print sheet with citations.",
+      "Readiness audit checklist."
+    ],
     "nextActions": ["Package existing MVPs into one kit.", "Write safety review checklist.", "Find first pilot organization."]
   },
   {
@@ -132,6 +201,29 @@
     "skills": ["whatsapp-scripts", "lead-routing", "reminder-flow", "fallback-copy"],
     "pipeline": ["Conversation audit", "Flow design", "Template writing", "Automation build", "Test", "Staff handoff"],
     "risks": ["Platform policy changes.", "Bad fallback handling.", "Client response delays.", "Privacy mistakes."],
+    "buyerPersonas": [
+      "Business owner receiving repeated WhatsApp questions every day.",
+      "Clinic, salon, tutor, repair shop, or agency that needs intake fields before staff can respond.",
+      "Small team that forgets follow-ups because all customer memory lives in chats."
+    ],
+    "intakeQuestions": [
+      "What are your 20 most common WhatsApp questions?",
+      "What information must be collected before you can quote, book, or help?",
+      "Which messages need a human immediately?",
+      "What follow-ups are currently forgotten?",
+      "Where should leads be logged?"
+    ],
+    "outreachAngles": [
+      "Your WhatsApp inbox is doing CRM work without CRM structure.",
+      "Start by organizing intake and follow-up before building a complicated bot.",
+      "A good WhatsApp system should know when to hand off to a human."
+    ],
+    "proofAssets": [
+      "Conversation map examples.",
+      "FAQ script pack.",
+      "Lead sheet template.",
+      "Fallback and escalation checklist."
+    ],
     "nextActions": ["Create 5 vertical flow packs.", "Demo Twilio sandbox.", "Write privacy checklist."]
   }
 ]
