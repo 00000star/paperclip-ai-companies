@@ -64,6 +64,20 @@ npm run offer-site -- zimsme-ai-solutions
 
 This writes a static landing page into `generated/<slug>/public-offer/`.
 
+## Sync Into An Existing Paperclip Package
+
+```bash
+npm run sync-existing -- zimsme-ai-solutions /home/starking/Desktop/zimsmeai-solutions
+```
+
+This enriches an existing package with foundry-generated docs, launch board files, offer site files, and manifest data without overwriting `.paperclip.yaml`, agents, projects, or skills.
+
+Validate the synced package:
+
+```bash
+npm run validate-sync -- /home/starking/Desktop/zimsmeai-solutions
+```
+
 ## Validate
 
 ```bash

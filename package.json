@@ -11,6 +11,8 @@
     "score": "node scripts/score-companies.mjs",
     "launch-board": "node scripts/generate-launch-board.mjs",
     "offer-site": "node scripts/generate-offer-site.mjs",
+    "sync-existing": "node scripts/sync-existing-package.mjs",
+    "validate-sync": "node scripts/validate-synced-package.mjs",
     "validate-package": "node scripts/validate-package.mjs"
   }
 }
