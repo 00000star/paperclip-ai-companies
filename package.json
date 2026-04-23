@@ -1,0 +1,12 @@
+{
+  "name": "paperclip-ai-companies",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI company foundry for designing, scoring, and scaffolding Paperclip-compatible company packages.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 4178",
+    "check": "node scripts/check.mjs",
+    "scaffold": "node scripts/scaffold-company.mjs"
+  }
+}

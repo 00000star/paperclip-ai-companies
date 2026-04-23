@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Paperclip AI Companies: design, score, compare, and scaffold AI-operated company packages."
+    />
+    <meta name="theme-color" content="#111827" />
+    <title>Paperclip AI Companies</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to companies</a>
+    <header class="topbar">
+      <a class="brand" href="#main" aria-label="Paperclip AI Companies home">
+        <span aria-hidden="true">PC</span>
+        <strong>Paperclip AI Companies</strong>
+      </a>
+      <nav aria-label="Primary sections">
+        <a href="#companies">Companies</a>
+        <a href="#operating-model">Operating Model</a>
+        <a href="#scaffold">Scaffold</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Company foundry</p>
+          <h1>Build AI-operated companies, not throwaway apps.</h1>
+          <p>
+            A Paperclip company is a packaged operating system: market thesis, offers, agents, skills, projects,
+            delivery pipeline, QA gates, economics, risks, and launch actions.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#companies">Compare Companies</a>
+            <a class="button secondary" href="#scaffold">Generate Package</a>
+          </div>
+        </div>
+        <aside class="thesis-card">
+          <strong>Real standard</strong>
+          <p>
+            If a company cannot identify a first buyer, sell a wedge offer, deliver repeatably, and avoid dangerous
+            promises, it is not ready for Paperclip automation.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section" id="companies" aria-labelledby="companies-title">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio</p>
+          <h2 id="companies-title">AI-company blueprints</h2>
+          <p>Score is weighted toward speed to cash, repeatability, automation fit, and manageable trust risk.</p>
+        </div>
+        <div class="company-grid" id="company-grid"></div>
+      </section>
+
+      <section class="section detail" id="detail" aria-live="polite">
+        <div class="detail-empty">Select a company blueprint to inspect the operating model.</div>
+      </section>
+
+      <section class="section" id="operating-model" aria-labelledby="model-title">
+        <div class="section-heading">
+          <p class="eyebrow">Operating model</p>
+          <h2 id="model-title">What every Paperclip company needs</h2>
+          <p>The point is not “AI agents”. The point is a repeatable commercial machine with clear boundaries.</p>
+        </div>
+        <div class="model-grid">
+          <article><h3>Wedge offer</h3><p>A narrow service that can be sold this week and delivered from a checklist.</p></article>
+          <article><h3>Agent org</h3><p>Roles with ownership: sales, ops, builder, QA, growth, and executive decision-making.</p></article>
+          <article><h3>Skills</h3><p>Reusable operating procedures that let agents produce consistent outputs.</p></article>
+          <article><h3>QA gates</h3><p>Stop bad handoffs before they reach a client or public user.</p></article>
+          <article><h3>Unit economics</h3><p>Entry, core, premium, and retainer pricing with delivery effort assumptions.</p></article>
+          <article><h3>Risk limits</h3><p>Explicit claims the company must not make and work it should reject or defer.</p></article>
+        </div>
+      </section>
+
+      <section class="section scaffold" id="scaffold" aria-labelledby="scaffold-title">
+        <div class="section-heading">
+          <p class="eyebrow">Scaffold</p>
+          <h2 id="scaffold-title">Generate a Paperclip package</h2>
+          <p>Use the CLI to turn a blueprint into package files.</p>
+        </div>
+        <pre><code>npm run scaffold -- zimsme-ai-solutions</code></pre>
+        <p class="hint">Outputs `COMPANY.md`, `.paperclip.yaml`, agent files, project files, skills, tasks, and docs into `generated/&lt;slug&gt;/`.</p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

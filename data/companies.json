@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "zimsme-ai-solutions",
+    "name": "ZimSME AI Solutions",
+    "status": "active_seed",
+    "market": "Zimbabwean SMEs and international small businesses that need websites, WhatsApp intake, AI quick wins, and launch support.",
+    "thesis": "A Paperclip-operated service company can turn structured WhatsApp intake into fast website, automation, and business launch deliverables.",
+    "firstBuyer": "Service businesses already selling through WhatsApp but lacking a credible website, lead capture, and follow-up system.",
+    "wedgeOffer": "Starter Site plus WhatsApp lead-capture setup delivered from structured homework and a QA gate.",
+    "pricing": {
+      "entry": 180,
+      "core": 450,
+      "premium": 1200,
+      "retainer": 120
+    },
+    "score": {
+      "marketPain": 9,
+      "speedToCash": 9,
+      "deliveryRepeatability": 8,
+      "automationFit": 8,
+      "trustRisk": 5,
+      "maintenanceLoad": 5
+    },
+    "agents": [
+      { "id": "ceo", "title": "CEO", "role": "Owns strategy, priorities, pricing, and final decisions." },
+      { "id": "frontdesk", "title": "Client Relations", "role": "Qualifies leads, collects homework, enforces deposit-before-build, manages handoff." },
+      { "id": "projectops", "title": "Project Operations", "role": "Turns intake into delivery briefs, stage gates, and owner assignments." },
+      { "id": "webbot", "title": "Website Delivery Engineer", "role": "Builds deployable static sites from approved briefs and templates." },
+      { "id": "aiexpert", "title": "AI Automation Expert", "role": "Builds FAQ bots, lead capture flows, reminder systems, and workflow automations." },
+      { "id": "qualitylead", "title": "QA Lead", "role": "Checks mobile, forms, copy, assets, deployment readiness, and client handoff." },
+      { "id": "growthhacker", "title": "Growth Lead", "role": "Runs outreach, referrals, proof posts, and weekly pipeline reporting." }
+    ],
+    "projects": [
+      "Web Presence Factory",
+      "AI SME Solutions",
+      "Business Consulting",
+      "Marketing & Growth",
+      "Operations & Delivery"
+    ],
+    "skills": [
+      "homework-collector",
+      "html-site-generator",
+      "whatsapp-scripts",
+      "business-health-check"
+    ],
+    "pipeline": [
+      "Lead captured",
+      "Package selected",
+      "Deposit confirmed",
+      "Homework complete",
+      "Delivery brief approved",
+      "Build",
+      "QA gate",
+      "Client review",
+      "Final handoff",
+      "Follow-up and upsell"
+    ],
+    "risks": [
+      "Selling custom apps before discovery.",
+      "Starting delivery before complete client homework.",
+      "Weak QA causing cheap-agency perception.",
+      "Overpromising AI automation without fallback paths."
+    ],
+    "nextActions": [
+      "Run 20 targeted WhatsApp outreach attempts.",
+      "Create 3 demo industry sites.",
+      "Test Twilio sandbox intake into Paperclip task creation.",
+      "Publish offer page with package boundaries."
+    ]
+  },
+  {
+    "slug": "paperclip-web-presence-factory",
+    "name": "Paperclip Web Presence Factory",
+    "status": "blueprint",
+    "market": "Small businesses worldwide that need premium static websites quickly without agency complexity.",
+    "thesis": "A narrow AI-operated website factory can win by being faster, clearer, and more packaged than freelance chaos.",
+    "firstBuyer": "Solo service businesses with outdated Facebook-only or WhatsApp-only presence.",
+    "wedgeOffer": "48-hour credibility site from guided intake, with WhatsApp CTA and deploy-ready ZIP.",
+    "pricing": { "entry": 150, "core": 400, "premium": 900, "retainer": 80 },
+    "score": { "marketPain": 8, "speedToCash": 10, "deliveryRepeatability": 9, "automationFit": 9, "trustRisk": 4, "maintenanceLoad": 4 },
+    "agents": [
+      { "id": "sales", "title": "Sales Desk", "role": "Qualifies businesses and gathers assets." },
+      { "id": "copy", "title": "Copy Lead", "role": "Turns rough notes into clear website copy." },
+      { "id": "builder", "title": "Site Builder", "role": "Builds static deployable websites." },
+      { "id": "qa", "title": "Launch QA", "role": "Checks responsiveness, links, forms, images, and handoff." }
+    ],
+    "projects": ["Template Library", "Client Intake", "Site Builds", "QA", "Case Studies"],
+    "skills": ["site-intake", "copy-polish", "static-site-builder", "launch-check"],
+    "pipeline": ["Lead", "Assets", "Copy", "Build", "QA", "Deploy package", "Review", "Retainer offer"],
+    "risks": ["Template sameness.", "Poor client assets.", "Scope creep.", "Low-price race."],
+    "nextActions": ["Build 5 vertical templates.", "Create intake form.", "Publish before/after demos."]
+  },
+  {
+    "slug": "resilience-ops-ai",
+    "name": "Resilience Ops AI",
+    "status": "blueprint",
+    "market": "Community groups, schools, clinics, and local councils that need emergency readiness operations.",
+    "thesis": "A local-first resilience software and consulting company can sell setup, training, and maintenance around practical offline tools.",
+    "firstBuyer": "Schools, churches, clinics, and NGOs with recurring outage, water, heat, or supply coordination problems.",
+    "wedgeOffer": "Offline readiness kit: incident board, water safety sheet, supply tracker, print handoff, and staff training.",
+    "pricing": { "entry": 250, "core": 900, "premium": 2500, "retainer": 180 },
+    "score": { "marketPain": 8, "speedToCash": 5, "deliveryRepeatability": 7, "automationFit": 7, "trustRisk": 8, "maintenanceLoad": 7 },
+    "agents": [
+      { "id": "fieldops", "title": "Field Ops Lead", "role": "Maps workflows, roles, readiness gaps, and training needs." },
+      { "id": "safety", "title": "Safety Reviewer", "role": "Reviews health, disaster, water, and legal-adjacent claims." },
+      { "id": "builder", "title": "Local-first Builder", "role": "Configures offline PWA modules and exports." },
+      { "id": "trainer", "title": "Training Lead", "role": "Creates drills, print sheets, and staff onboarding." }
+    ],
+    "projects": ["Disaster Mesh", "Clean Water Field Guide", "Supply Logistics", "Training Packs"],
+    "skills": ["readiness-audit", "safety-copy-review", "offline-kit-builder", "training-pack-generator"],
+    "pipeline": ["Readiness audit", "Risk map", "Kit configuration", "Training", "Drill", "Revision", "Retainer"],
+    "risks": ["False safety claims.", "Slow institutional sales.", "Local authority dependency.", "High trust burden."],
+    "nextActions": ["Package existing MVPs into one kit.", "Write safety review checklist.", "Find first pilot organization."]
+  },
+  {
+    "slug": "whatsapp-ops-studio",
+    "name": "WhatsApp Ops Studio",
+    "status": "blueprint",
+    "market": "Businesses that run sales, support, appointments, and operations primarily through WhatsApp.",
+    "thesis": "Most WhatsApp-heavy businesses do not need complex CRM first; they need intake, routing, reminders, templates, and follow-up discipline.",
+    "firstBuyer": "Clinics, salons, tutors, repair shops, agencies, and small retailers drowning in repeated WhatsApp messages.",
+    "wedgeOffer": "WhatsApp intake and follow-up kit with FAQ scripts, lead sheet, reminder templates, and optional Twilio sandbox bot.",
+    "pricing": { "entry": 120, "core": 350, "premium": 900, "retainer": 100 },
+    "score": { "marketPain": 9, "speedToCash": 8, "deliveryRepeatability": 8, "automationFit": 8, "trustRisk": 5, "maintenanceLoad": 6 },
+    "agents": [
+      { "id": "intake", "title": "Intake Designer", "role": "Maps conversation flows and required fields." },
+      { "id": "automation", "title": "Automation Builder", "role": "Builds bot, sheet, CRM, or reminder integrations." },
+      { "id": "copy", "title": "Message Copywriter", "role": "Writes replies, handoff scripts, and escalation messages." },
+      { "id": "qa", "title": "Conversation QA", "role": "Tests flows, edge cases, and fallback paths." }
+    ],
+    "projects": ["Conversation Maps", "Bot Builds", "Template Library", "Client QA"],
+    "skills": ["whatsapp-scripts", "lead-routing", "reminder-flow", "fallback-copy"],
+    "pipeline": ["Conversation audit", "Flow design", "Template writing", "Automation build", "Test", "Staff handoff"],
+    "risks": ["Platform policy changes.", "Bad fallback handling.", "Client response delays.", "Privacy mistakes."],
+    "nextActions": ["Create 5 vertical flow packs.", "Demo Twilio sandbox.", "Write privacy checklist."]
+  }
+]
