@@ -10,6 +10,7 @@ const requiredFiles = [
   "scripts/scaffold-company.mjs",
   "scripts/score-companies.mjs",
   "scripts/generate-launch-board.mjs",
+  "scripts/generate-offer-site.mjs",
   "scripts/validate-package.mjs",
   "README.md",
   "package.json",
@@ -31,6 +32,7 @@ const js = readFileSync(join(root, "app.js"), "utf8");
 const scaffold = readFileSync(join(root, "scripts/scaffold-company.mjs"), "utf8");
 const score = readFileSync(join(root, "scripts/score-companies.mjs"), "utf8");
 const launchBoard = readFileSync(join(root, "scripts/generate-launch-board.mjs"), "utf8");
+const offerSite = readFileSync(join(root, "scripts/generate-offer-site.mjs"), "utf8");
 const validatePackage = readFileSync(join(root, "scripts/validate-package.mjs"), "utf8");
 
 if (companies.length < 4) failures.push("Expected at least four company blueprints");
@@ -59,6 +61,7 @@ for (const phrase of ["COMPANY.md", ".paperclip.yaml", "AGENTS.md", "PROJECT.md"
 
 if (!score.includes("score | slug | core | retainer | name")) failures.push("Score report header missing");
 if (!launchBoard.includes("launch-board.json")) failures.push("Launch board generator missing JSON output");
+if (!offerSite.includes("public-offer")) failures.push("Offer site generator missing public-offer output");
 if (!validatePackage.includes("company.manifest.json")) failures.push("Package validator missing manifest check");
 
 if (failures.length > 0) {

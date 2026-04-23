@@ -56,6 +56,14 @@ npm run launch-board -- zimsme-ai-solutions
 
 This writes a JSON launch board into the generated company package with outreach, proof, offer, intake, QA, and follow-up workstreams.
 
+## Generate A Public Offer Site
+
+```bash
+npm run offer-site -- zimsme-ai-solutions
+```
+
+This writes a static landing page into `generated/<slug>/public-offer/`.
+
 ## Validate
 
 ```bash
