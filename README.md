@@ -11,6 +11,10 @@ The goal is to build real AI-operated companies, not shallow app demos. A compan
 - A scaffold CLI that generates a portable Paperclip company package.
 - Markdown and YAML output compatible with the existing ZimSME-style package pattern.
 
+## Published Company Packages
+
+- ZimSME AI Solutions: https://github.com/00000star/zimsmeai-solutions
+
 ## Run The Dashboard
 
 ```bash
